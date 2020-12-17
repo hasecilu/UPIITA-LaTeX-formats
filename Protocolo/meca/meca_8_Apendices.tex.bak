@@ -1,0 +1,21 @@
+\section{Ap\'endices}
+\label{Apendices}
+
+Ap\'endices
+Un chingo de documentos
+
+\input{meca_8_1_Plan_manuf_ensmbl_refacc}
+
+\input{meca_8_2_Plano_normalizado}
+
+\input{meca_8_3_Plano_ensamble}
+
+\input{meca_8_4_Plano_explosionado}
+
+\input{meca_8_5_Diagrama_control}
+
+\input{meca_8_6_Diagrama_modos_operacion}
+
+\input{meca_8_7_Diagrama_electr}
+
+Y cualquier documento que sirva para la tesis.

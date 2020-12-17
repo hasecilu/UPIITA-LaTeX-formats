@@ -1,0 +1,220 @@
+\section{Estructura de funciones}
+\label{Estructura_funciones}
+
+Estructura de funciones
+\par
+Las funciones son todas aquellas actividades que debe de realizar .
+\newline(Checar si se puede redactar de una manera esta parte)
+
+\textbf{Funciones funcionales}\newline
+Las funciones funcionales son aquellas funciones que tienen un efecto directo sobre la funci\'on principal del sistema, es decir, la falta de esta si afecta al cumplimiento de la funci\'on principal.\newline
+Para marcar a las funciones funcionales en la presente secci\'on se marcaron a estas con el indicador:\hfill\textbf{\textit{F}}.
+
+\textbf{Funciones no funcionales}\newline
+Las funciones no funcionales son aquellas funciones que no tienen un efecto directo sobre la funci\'on principal del sistema, es decir, la falta de esta no afecta al cumplimiento de la funci\'on principal.\newline
+Para marcar a las funciones no funcionales en la presente secci\'on se marcaron a estas con el indicador: \hfill\textbf{\textit{NF}}.
+\\\\\\\\\\\\\\\\\\%La vieja confiable
+
+
+  \begin{center}
+  
+  \tablefirsthead{%
+  \hline
+  \multicolumn{1}{|c}{ITEM} &
+  \multicolumn{1}{c}{NOMBRE DE FUNCI\'ON} &
+  \multicolumn{1}{c|}{F/NF} \\
+  \hline}
+  \tablehead{%
+  \hline
+  \multicolumn{3}{|l|}{\small\sl continua de la p\'agina anterior}\\
+  \hline
+  \multicolumn{1}{|c}{ITEM} &
+  \multicolumn{1}{c}{NOMBRE DE FUNCI\'ON} &
+  \multicolumn{1}{c|}{F/NF} \\
+  \hline}
+  \tabletail{%
+  \hline
+  \multicolumn{3}{|r|}{\small\sl continua en la siguiente p\'agina}\\
+  \hline}
+  \tablelasttail{\hline}
+  \bottomcaption{Descripci\'on de funciones}
+  
+    \begin{supertabular}{p{3em}p{15em}p{3em}}
+    %ITEM  & NOMBRE DE FUNCI\'ON & F/NF \\
+    %\hline\hline
+    F0    & \textbf{Recoger y Colocar componentes electr\'onicos} & \multicolumn{1}{l}{} \\
+    \hline
+    F1    & Manipular posici\'on de los componentes & \textbf{F} \\
+    F11   & Generar movimiento & \textbf{F} \\
+    F111  & Generar movimiento de traslaci\'on & \textbf{F} \\
+    F112  & Generar movimiento de rotaci\'on & \textbf{F} \\
+    F12   & Acoplar movimiento & \textbf{F} \\
+    F13   & Mover los componentes & \textbf{F} \\
+    F131  & Recoger los componentes del \'area de trabajo & \textbf{F} \\
+    F132  & Orientar los componentes & \textbf{F} \\
+    F1321 & Rotar los componentes & \textbf{F} \\
+    F1322 & Trasladar los componentes & \textbf{F} \\
+    F133  & Colocar los componentes en la PCB & \textbf{F} \\
+    \hline
+    F2    & Gestionar Energ\'ia & \textbf{F} \\
+    F21   & Acondicionar energ\'ia el\'ectrica & \textbf{F} \\
+    F22   & Almacenar energ\'ia el\'ectrica & \textbf{NF} \\
+    F23   & Distribuir energ\'ia el\'ectrica & \textbf{F} \\
+    F24   & Disipar calor & \textbf{NF} \\
+    \hline
+    F3    & Gestionar informaci\'on & \textbf{F} \\
+    F31   & Medir par\'ametros & \textbf{F} \\
+    F311  & Medir par\'ametros internos & \textbf{F} \\
+    F3111 & Medir temperatura interna & \textbf{NF} \\
+    F3112 & Medir ubicaci\'on del dispositivo de recolecci\'on & \textbf{F} \\
+    F31121 & Medir rotaci\'on del dispositivo de recolecci\'on & \textbf{F} \\
+    F31122 & Medir posici\'on del dispositivo de recolecci\'on & \textbf{F} \\
+    F3113 & Medir velocidad del dispositivo de recolecci\'on & \textbf{F} \\
+    F3114 & Medir aceleraci\'on del dispositivo de recolecci\'on & \textbf{F} \\
+    F3115 & Medir fuerza del dispositivo de recolecci\'on & \textbf{F} \\
+    F312  & Medir par\'ametros externos & \textbf{F} \\
+    F3121 & Medir temperatura externa & \textbf{NF} \\
+    F3122 & Medir ubicaci\'on de componentes & \textbf{F} \\
+    F31221 & Medir rotaci\'on de componentes & \textbf{F} \\
+    F31222 & Medir posici\'on de componentes & \textbf{F} \\
+    F32   & Acondicionar informaci\'on & \textbf{F} \\
+    F33   & Procesar informaci\'on & \textbf{F} \\
+    F34   & Almacenar informaci\'on & \textbf{F} \\
+    F35   & Tomar deciciones & \textbf{F} \\
+    F351  & Diagnositcar fallas & \textbf{F} \\
+    F352  & Recuperar funcionalidad & \textbf{F} \\
+    F353  & Controlar posici\'on & \textbf{F} \\
+    F354  & Controlar velocidad & \textbf{F} \\
+    F355  & Controlar aceleraci\'on & \textbf{F} \\
+    F356  & Controlar fuerza & \textbf{F} \\
+    F357  & Controlar temperatura interna & \textbf{F} \\
+    F36   & Comunicar sistema & \textbf{F} \\
+    F361  & Comunicar internamente & \textbf{F} \\
+    F362  & Comunicar externamente & \textbf{NF} \\
+    F3621 & Interactuar con el usuario & \textbf{NF} \\
+    F3622 & Comunicar con otros sistemas & \textbf{NF} \\
+    \hline
+    F4    & Soportar y proteger & \textbf{NF} \\
+    F41   & Proteger & \textbf{NF} \\
+    F411  & Proteger usuario & \textbf{NF} \\
+    F4111 & Iluminar \'area de trabajo & \textbf{NF} \\
+    F4112 & Indicar l\'imites del \'area de trabajo & \textbf{NF} \\
+    F412  & Proteger componentes SMD y PCB & \textbf{NF} \\
+    F4121 & Inmovilizar PCB & \textbf{NF} \\
+    F4122 & Verificar correspondencia de componente con espacio en PCB & \textbf{NF} \\
+    F413  & Proteger robot & \textbf{NF} \\
+    F4131 & Amortiguar vibraciones & \textbf{NF} \\
+    F4132 & Impedir sobrecalentamiento & \textbf{NF} \\
+    F4134 & Ocultar c\'odigos fuente & \textbf{NF} \\
+    F414  & Bloquear proceso & \textbf{NF} \\
+    F42   & Soportar & \textbf{NF} \\
+    \end{supertabular}%
+  \label{estructuraF}%
+\end{center}
+
+\section{Funciones por tipo de transformaci\'on}
+%
+Para poder indentificar de una forma m\'as sencilla los m\'odulos que conforman el sistema separamos las funciones por tipo de transformaci\'on, ya sea de informaci\'on, energ\'ia o materia, as\'i podremos agrupar de una mejor manera los m\'odulos de nuestro sistema.
+
+\begin{center}
+\begin{tabular}{ | m{2cm} | m{2cm} | m{2cm} | } 
+ \hline
+ \multicolumn{3}{|c|}{Tipo de transformaci\'on} \\
+ \hline
+ Informaci\'on & Energ\'ia & Materia\\
+ \hline\hline
+ F\textsubscript{3} & F\textsubscript{2} & F\textsubscript{0} \\
+ \hline
+ F\textsubscript{3-1} & F\textsubscript{2-1} & F\textsubscript{1} \\
+ \hline
+ F\textsubscript{3-1-1} & F\textsubscript{2-2} & F\textsubscript{1-1} \\
+ \hline
+ F\textsubscript{3-1-1-1} & F\textsubscript{2-3} & F\textsubscript{1-1-1} \\
+ \hline
+ F\textsubscript{3-1-1-2} & F\textsubscript{2-4} & F\textsubscript{1-1-2} \\
+ \hline
+ F\textsubscript{3-1-1-2-1} &  & F\textsubscript{1-1-2} \\
+ \hline
+ F\textsubscript{3-1-1-2-2} &  & F\textsubscript{1-2} \\
+ \hline
+ F\textsubscript{3-1-1-3} &  & F\textsubscript{1-3} \\
+ \hline
+ F\textsubscript{3-1-1-4} &  & F\textsubscript{1-3-1} \\
+ \hline
+ F\textsubscript{3-1-1-5} &  & F\textsubscript{1-3-2} \\
+ \hline
+ F\textsubscript{3-1-2} &  & F\textsubscript{1-3-2-1} \\
+ \hline
+ F\textsubscript{3-1-2-1} &  & F\textsubscript{1-3-2-2} \\
+ \hline
+ F\textsubscript{3-1-2-2} &  & F\textsubscript{1-3-3} \\
+ \hline
+ F\textsubscript{3-1-2-2-1} &  & F\textsubscript{4} \\
+ \hline
+ F\textsubscript{3-1-2-2-2} &  &  F\textsubscript{4-1} \\
+ \hline
+ F\textsubscript{3-2} &  &  F\textsubscript{4-1-1} \\
+ \hline
+ F\textsubscript{3-3} &  &  F\textsubscript{4-1-1-1} \\
+ \hline
+ F\textsubscript{3-4} &  &  F\textsubscript{4-1-1-2} \\
+ \hline
+ F\textsubscript{3-5} &  &  F\textsubscript{4-1-2} \\
+ \hline
+ F\textsubscript{3-5-1} &  & F\textsubscript{4-1-2-1} \\  
+ \hline
+ F\textsubscript{3-5-2} &  &  F\textsubscript{4-1-2-2} \\
+ \hline
+ F\textsubscript{3-5-2} &  &  F\textsubscript{4-1-3} \\
+ \hline
+ F\textsubscript{3-5-4} &  &  F\textsubscript{4-1-3-1} \\
+ \hline
+ F\textsubscript{3-5-5} &  &  F\textsubscript{4-1-3-2} \\
+ \hline
+ F\textsubscript{3-6} &  &  F\textsubscript{4-1-3-3} \\
+ \hline
+ F\textsubscript{3-6-1} &  & F\textsubscript{4-1-4} \\
+ \hline
+ F\textsubscript{3-6-2} &  &  \\
+ \hline
+ F\textsubscript{3-6-2-1} &  &  \\
+ \hline
+ F\textsubscript{3-6-2-2} &  &  \\
+ 
+ 
+\hline
+\end{tabular}
+\end{center}
+
+
+%
+\section{M\'odulos del SM}
+%
+De acuerdo a las funciones del sistema se proponen los siguientes m\'oduos para conformar al mismo.
+
+\begin{itemize}
+  \item S1: \textit{Sistema estructural}: Se encarga de \underline{integrar} a todos los componentes que conforman el sistema as\'i como tambi\'en de protegerlos de elementos externos y de si mismo.
+  \item M1: \textit{M\'odulo energ\'etico}: Se encarga de transformar y distribuir la energ\'ia el\'ectrica a todos los componentes del sistema que lo requieren.
+  \item M2: \textit{M\'odulo de medici\'on de par\'ametros}: Se encarga de medir todas aquellas variables significativas para el sistema.
+  \item M3: \textit{M\'odulo de movimiento }: Se encarga de trasladar los componentes desde el alimentador de componentes hasta su respectiva posici\'on en la PCB.
+  \item M4: \textit{M\'odulo de agarre}: Se encarga de agarrar al componente de su posici\'on original, sostener durante el trayecto y soltar en el lugar adecuado a los componentes.
+  \item M5: \textit{M\'odulo de procesamiento de informaci\'on}: Se encarga de realizar todos los c\'alculos necesarios para el control, as\'i como de procesar datos de entrada.
+  \item M6: \textit{M\'odulo alimentador de componentes}: Se encarga de colocar a los componentes en cierta posici\'on de la cual ser\'an tomados por el m\'odulo de agarre.
+  \item M7: \textit{Interfaz humano-m\'aquina}: Se encarga de enviar informaci\'on del sistema al operario  y viceversa, tiene una gran importancia porque a trav\'ez de este m\'odulo funciona el modo de operaci\'on semiautom\'atico.
+  \item S2: \textit{Sistema de procesamiento central}: Es la uni\'on de M2 y M5.
+  \item S3: \textit{Sistema de manipulaci\'on}: Es la uni\'on de M3 y M4.
+\end{itemize}
+
+
+
+\section{Modelo Jer\'arquico de funciones}
+%
+Se muestra la descomposici\'on de funciones del SM con el Modelo Jer\'arquico de funciones basado en el modelo FBS (Functional Breakdown Structure).
+%Muchos saltos de linea para obligar a la seccion IV a estar despues de la imagen
+%\newline\newline\newline\newline\newline\newline\newline\newline\newline\newline\newline
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.25]{images/Modelo FBS.jpg}
+\caption{Functional Breakdown Structure}
+\end{figure}
