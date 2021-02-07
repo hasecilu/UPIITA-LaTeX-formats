@@ -63,6 +63,9 @@
 \RequirePackage{capt-of}  % Permite usar etiquetas fuera de elementos flotantes
 \RequirePackage{wrapfig}  % Text wrapped around figures & tables
 \RequirePackage{subfigure}  % Subfiguras
+\RequirePackage{supertabular}
+\RequirePackage{rotating}
+\RequirePackage{booktabs} % toprule, midrule, bottomrule
 
 \RequirePackage{color}  % Foreground and background colour management
 \RequirePackage{xcolor}  % Color extensions for LaTeX and pdfLaTeX 
@@ -77,8 +80,19 @@
 
 \RequirePackage{enumitem}  % Customize lists
 \RequirePackage{lipsum}  % Dummy text
+\usepackage{pdflscape}
+\usepackage{afterpage}
+\RequirePackage{pgf}
 \RequirePackage{tikz}
-%\RequirePackage{anysize}  % Para personalizar el ancho de  los márgenes, DO NOT USE, IT GENERATES PROBLEMS WITH GEOMETRY PACKAGE. GEOMETRY > ANYSIZE
+\RequirePackage[edges]{forest} %  for drawing linguistic (and other kinds of) trees - [edges] for making lines vertical & horizontal only
+
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+\tikzset{parent/.style={fill=colorIPN!60,align=center,text width=2cm,rounded corners=2pt},
+		 child/.style={fill=colorIPN!40,align=center,text width=2.8cm,rounded corners=6pt},
+		 grandchild/.style={fill=colorIPN!20,text width=2.3cm}
+}
+
+
 \RequirePackage{fancyhdr} % Control of headers and footers
 
 % Set biblatex as bibliography manager, biblatex > bibtex
@@ -86,6 +100,8 @@
 
 %\RequirePackage{chemfig} % Draw molecules
 %\RequirePackage{showframe} % Show boxes on document
+
+\RequirePackage{pdfpages} %% Add pdf files to your text
 
 
 % CUSTOM COMMANDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,19 +124,17 @@
 
 \RequirePackage{appendix}
 \renewcommand{\appendixname}{Apéndices}
-\renewcommand{\appendixtocname}{Apéndices toc}
-\renewcommand{\appendixpagename}{Apéndices page} 
+\renewcommand{\appendixtocname}{Apéndices}
+\renewcommand{\appendixpagename}{Apéndices} 
 
 % Number equations/figures/tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
 
-\renewcommand{\figurename}{Figurín. }
+\renewcommand{\figurename}{Figurín. } % juas juas XD
 
 % PAGE FORMAT RELATED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\marginsize{2cm}{2cm}{2cm}{2cm}  % Izquierda, derecha, arriba, abajo DO NOT USE
 
 \setlength{\parindent}{2em} % Indentation - horizontal length
 \setlength{\parskip}{1em} % Indentation - vertical length
@@ -130,13 +144,13 @@
 % Headers and footers
 %\pagestyle{fancy}
 %\fancyhf{}
-%%\fancyhead[L]{\footnotesize Instituto Polit\'ecnico Nacional}
+%%\fancyhead[L]{\footnotesize Instituto Politécnico Nacional}
 %\fancyhead[L]{\footnotesize IPN}  % Left head
-%%\fancyhead[R]{\footnotesize Unidad Profesional Interdisciplinaria en Ingenier\'ia y Tecnolog\'ias Avanzadas}
+%%\fancyhead[R]{\footnotesize Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas}
 %\fancyhead[R]{\footnotesize UPIITA}   % Right head
-%\fancyfoot[R]{\footnotesize Ingenier\'ia Mecatrónica}  % Right foot
+%\fancyfoot[R]{\footnotesize Ingeniería Mecatrónica}  % Right foot
 %\fancyfoot[C]{\thepage}  % Center
-%\fancyfoot[L]{\footnotesize Sistema embebido bien ching\'on implementado en FPGA }  % Left foot
+%\fancyfoot[L]{\footnotesize Sistema embebido bien chingón implementado en FPGA }  % Left foot
 %\renewcommand{\footrulewidth}{0.4pt}
 
 % WTF COMMANDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

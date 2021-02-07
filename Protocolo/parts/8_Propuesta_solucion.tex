@@ -3,11 +3,193 @@
 1 200 − 2 400 palabras\\
 
 \subsection{Definición de la metodología mecatrónica}
-dcvdsffdvedf\\
+Escoger alguna de las siguientes
+% To do list: add references
+\begin{itemize}
+	\item VDI-Standard: VDI-2206 es un estándar alemán para el diseño de sistemas mecatrónicos
+	\item De Silva presenta en Mechatronic systems: devices, design, control, operation and monitoring. conceptos generales de sistemas mecatrónicos
+	\item Shetty y Kolk en Mechatronics system design, SI version desarrollan un modelo para diseñar sistemas mecatrónicos
+\end{itemize}
 
 \subsection{Desarrollo de la propuesta de solución}
-dcvdsffdvedf\\
+\lipsum[15]
+
+Las necesidades son especificaciones que da el usuario y se deben de cubrir de forma satisfactoria, mientras
+que los requerimientos se definen como especificaciones puntuales de un sistema, que incluyen una
+declaración de valor y unidades.\\
+
+\begin{table}[!ht]
+	\centering
+	\caption{Tabla de necesidades}
+	\begin{tabular}{ccc}
+		\toprule
+		\textbf{No.} & \textbf{Necesidad} & \textbf{Clasificación} \\ \midrule
+		N\textsubscript{1} &   Ser eficiente    &       Funcional        \\
+		N\textsubscript{2} &   Ser eficiente    &      No funcional      \\ \bottomrule
+	\end{tabular}
+\end{table}
+
+Se convierten las necesidades en requerimientos medibles
+\begin{table}[!ht]
+	\centering
+	\caption{Tabla de requerimientos}
+	\begin{tabular}{cccc}
+		\toprule
+		\textbf{No.} & \textbf{Requerimiento} & \textbf{Variable} & \textbf{Valor} \\ \midrule
+	 R\textsubscript{1}   &       Velocidad        &       $ v $       &    0 [m/s]     \\
+	 R\textsubscript{2}   &          Peso          &       $ w $       &     20 [N]     \\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\textbf{{\large Funciones que componen al sistema}}
+
+FBS (Functional Breakdown Structure)
+
+\textbf{Función principal}: asd\\
+
+F\textsubscript{1}: Función relacionada con el propósito del sistema. 
+\begin{itemize}
+	\item El sistema debe de ...
+\end{itemize}
+
+F\textsubscript{2}: Gestionar energía. 
+\begin{itemize}
+	\item El sistema debe de transformar la energía de entrada 
+	\item El sistema debe de suministrar la energía a todos los subsistemas que la requieran
+\end{itemize}
+
+F\textsubscript{3}: Gestionar información. 
+\begin{itemize}
+	\item El sistema debe de medir los parámetros de interés
+	\item El sistema debe de acondicionar las señales de las variables de interés
+	\item El sistema debe de procesar la información
+	\item El sistema debe de almancenar la información para ...
+	\item El sistema debe de tomar desiciones
+	\item El sistema debe de comunicar a los diferentes subsistemas
+\end{itemize}
+
+F\textsubscript{4}: Soportar y proteger al sistema. 
+\begin{itemize}
+	\item El sistema debe de soportar todas sus partes y mantenerse rígido %( que no esté guango XD)
+	\item El sistema debe de proteger las partes críticas pra evitar su destrucción
+	\item El sistema debe de proteger al usuario del sistema % must protect that smile!
+\end{itemize}
+
+F\textsubscript{5}: Gestionar el modo de operación del sistema. 
+\begin{itemize}
+	\item El sistema debe gestionar el comportamiento del sistema en los modos de operación: manual,
+	automático, semiautomático, diagnóstico, de calibración y de espera. % Ejemplos
+\end{itemize}
+
+F\textsubscript{6}: Interactuar con el usuario. 
+\begin{itemize}
+	\item El usuario deberá poder escoger entre los modos de operación
+	\item El usuario podrá visualizar el estado del sistema por medio de una interfaz% aplicación móvil, etc.
+\end{itemize}
+	
+% https://tex.stackexchange.com/a/299500/
+% Ejemplo de FBS, no coincide con lo anterior
+\begin{center}
+	\resizebox{0.9\textwidth}{!}{%
+		\begin{forest}
+			for tree={
+				% forked edges,
+				draw,
+				rounded corners,
+				node options={align=center,},
+				text width=2.7cm,
+				minimum width=2cm, minimum height=1cm
+			},
+			where level=0{%
+			}{%
+				folder,
+				grow'=0,
+				if level=1{%
+					before typesetting nodes={child anchor=north},
+					edge path'={(!u.parent anchor) -- ++(0,-25pt) -| (.child anchor)},
+				}{},
+			}
+			[Función principal, parent
+				[F\textsubscript{1}, child
+					[F\textsubscript{1.1}, grandchild
+						[F1.1.1, for tree={fill=colorIPN!10}]
+						[F1.1.2, for tree={fill=colorIPN!10}]
+					]
+					[F1.2, grandchild]
+					[F1.3, grandchild
+						[F1.3.1, for tree={fill=colorIPN!10}]
+						[F1.3.2, for tree={fill=colorIPN!10}]
+						[F1.3.2, for tree={fill=colorIPN!10}]
+					]
+					[F1.4, grandchild]
+					[F1.5, grandchild]
+				]
+				[F\textsubscript{2}, child
+					[F2.1, grandchild]
+					[F2.2, grandchild]
+					[F2.3, grandchild]
+					[F2.4, grandchild]
+					[F2.5, grandchild]
+					[F2.6, grandchild]
+					[F2.7, grandchild]
+				]
+				[F\textsubscript{3}, child
+					[F3.1, grandchild]
+					[F3.2, grandchild]
+					[F3.3, grandchild]
+					[F3.4, grandchild
+						[F3.4.1, for tree={fill=colorIPN!10}]
+						[F3.4.2, for tree={fill=colorIPN!10}]
+					]
+				]
+				[F\textsubscript{4}, child
+					[F4.1, grandchild]
+					[F4.2, grandchild]
+					[F4.3, grandchild]
+					[F4.4, grandchild
+						[F4.4.1, for tree={fill=colorIPN!10}]
+						[F4.4.2, for tree={fill=colorIPN!10}]
+					]
+				]
+				[F\textsubscript{5}, child
+					[F5.1, grandchild]
+					[F5.2, grandchild]
+					[F5.3, grandchild
+						[F5.3.1, for tree={fill=colorIPN!10}]
+						[F5.3.2, for tree={fill=colorIPN!10}]
+						[F5.3.3, for tree={fill=colorIPN!10}]
+					]
+					[F5.4, grandchild]
+				]
+				[F\textsubscript{6}, child
+					[F6.1, grandchild]
+					[F6.2, grandchild]
+					[F6.3, grandchild]
+					[F\textsubscript{6.4}, grandchild
+						[F\textsubscript{6.4.1}, for tree={fill=colorIPN!10}]
+						[F\textsubscript{6.4.2}, for tree={fill=colorIPN!10}]
+					]
+					[F6.5, grandchild]
+				]
+			]
+		\end{forest}
+	}
+\end{center}
+
+% Ejemplo de integración de módulos y subssitemas, no coincide con lo anterior
+\begin{tabular}{c p{150mm}}
+	S\textsubscript{1} & \textit{Sistema estructural}: Se encarga de \underline{integrar} a todos los componentes que conforman el sistema así como también de protegerlos de elementos externos y de si mismo.\\
+	M\textsubscript{1} & \textit{Módulo energético}: Se encarga de transformar y distribuir la energía eléctrica a todos los componentes del sistema que lo requieren. \\
+	M\textsubscript{2} & \textit{Módulo de medición de parámetros}: Se encarga de medir todas aquellas variables significativas para el sistema.\\
+	M\textsubscript{3} & \textit{Módulo de movimiento }: Se encarga de trasladar los componentes desde el alimentador de componentes hasta su respectiva posición en la PCB.\\
+	M\textsubscript{4} & \textit{Módulo de agarre}: Se encarga de agarrar al componente de su posición original, sostener durante el trayecto y soltar en el lugar adecuado a los componentes. \\
+	M\textsubscript{5} & \textit{Módulo de procesamiento de información}: Se encarga de realizar todos los cálculos necesarios para el control, así como de procesar datos de entrada. \\
+	M\textsubscript{6} & \textit{Módulo alimentador de componentes}: Se encarga de colocar a los componentes en cierta posición de la cual serán tomados por el módulo de agarre. \\
+	M\textsubscript{7} & \textit{Interfaz humano-máquina}: Se encarga de enviar información del sistema al operario  y viceversa, tiene una gran importancia porque a travéz de este módulo funciona el modo de operación semiautomático. \\
+	S\textsubscript{2} & \textit{Sistema de procesamiento central}: Es la unión de M2 y M5. \\
+	S\textsubscript{3} & \textit{Sistema de manipulación}: Es la unión de M3 y M4.
+\end{tabular}
 
 \subsection{Resultados esperados}
-dcvdsffdvedf\\
+Con este prototipo se busca ...
 

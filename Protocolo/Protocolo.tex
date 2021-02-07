@@ -4,38 +4,46 @@
 
 %\hyphenation{trans-fe-ren-cia}
 
+
 \begin{document}
 
-\input{parts/0_Portada_reporte}
+	\input{parts/0_Portada_reporte} % En realidad no se necesita esta página -> borrar
 
-\tableofcontents
-%\listoffigures
-%\listoftables
+	\includepdf[pages=1, pagecommand={\thispagestyle{plain}}, fitpaper=true]{parts/FormatoPortada_3.1.pdf}
+	
+%	\setlength{\baselineskip}{0.4\baselineskip} % Reducir espacio vertical entre líneas
+	\tableofcontents
+%	\setlength{\baselineskip}{2.5\baselineskip} % Restaurar espacio vertical entre líneas
 
-\newpage
-
-\input{parts/1_Resumen}
-
-\input{parts/2_Introduccion}
-
-\input{parts/3_Planteamiento}
-
-\input{parts/4_Justificacion}
-
-\input{parts/5_Objetivos}
-
-\input{parts/6_Antecedentes}
-
-\input{parts/7_Marco_teorico}
-
-\input{parts/8_Propuesta_solucion}
-
-\input{parts/9_Administracion}
-
-%{\fontfamily{Calibri}\selectfont
-%	This text uses a different font typeface
-%}
-
-\printbibliography
+	\listoffigures
+	\listoftables
+	
+	\newpage
+	
+	\input{parts/1_Resumen}
+	
+	\input{parts/2_Introduccion}
+	
+	\input{parts/3_Planteamiento}
+	
+	\input{parts/4_Justificacion}
+	
+	\input{parts/5_Objetivos}
+	
+	\input{parts/6_Antecedentes}
+	
+	\input{parts/7_Marco_teorico}
+	
+	\input{parts/8_Propuesta_solucion}
+	
+	\input{parts/9_Administracion}
+	
+	%{\fontfamily{Calibri}\selectfont
+	%	This text uses a different font typeface
+	%}
+	
+	% https://www.youtube.com/watch?v=GAVXVkcpbG0
+	\addcontentsline{toc}{section}{Referencias}
+	\printbibliography
 
 \end{document}
