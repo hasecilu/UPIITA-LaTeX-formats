@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 
 % Name of the class we are creating
-\ProvidesClass{ReportTipoUli}[2020/09/02 Technical Report]
+\ProvidesClass{ArticleTipoUli}[2020/09/02 Technical Report]
 
 % Now we need to use an existent class
 % I'm using the article class because is very handy
