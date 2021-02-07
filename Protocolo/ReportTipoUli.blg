@@ -1,5 +1,0 @@
-[0] Config.pm:312> INFO - This is Biber 2.15 (beta)
-[0] Config.pm:315> INFO - Logfile is 'ReportTipoUli.blg'
-[119] biber-MSWIN64:330> INFO - === 
-[534] Utils.pm:411> ERROR - Cannot find 'ReportTipoUli.bcf'!
-[534] Biber.pm:132> INFO - ERRORS: 1
