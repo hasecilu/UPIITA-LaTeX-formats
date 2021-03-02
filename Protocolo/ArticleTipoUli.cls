@@ -104,6 +104,17 @@
 \RequirePackage{pdfpages} %% Add pdf files to your text
 
 
+% METADATA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage[pdfauthor={hasecilu},
+pdftitle={Nombre del protocolo},
+pdfsubject={Materia},
+pdfkeywords={XD},
+pdfproducer={LaTeX with hyperref, or other system},
+pdfcreator={XeLaTeX},
+colorlinks=true, plainpages=true, citecolor=blue, linkcolor=colorIPNdark]{hyperref}
+
+
 % CUSTOM COMMANDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newtcolorbox{mymathbox}[1][]{colback=white, sharp corners, #1}
@@ -115,7 +126,7 @@
 \definecolor{colorIPN}{RGB}{108 29 69}  % Pantone 222 C
 \definecolor{colorIPNdark}{HTML}{360F22} % Color generated with \usecolortheme[named=colorIPN]{structure} on beamer document
 \definecolor{colorIPNlight}{HTML}{6C1D45} % Color generated with \usecolortheme[named=colorIPN]{structure} on beamer document
-\RequirePackage[colorlinks=true, plainpages=true, citecolor=blue, linkcolor=colorIPNdark]{hyperref}
+%\RequirePackage[colorlinks=true, plainpages=true, citecolor=blue, linkcolor=colorIPNdark]{hyperref}
 
 % Circle for referencing equations alternative, \textcircled is ugly
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
