@@ -5,7 +5,7 @@ Recommended software: [TeXstudio](https://www.texstudio.org/) + [Dark-TeXstudio 
 
 Build and view command: `txs:///xelatex | txs:///biber | txs:///xelatex | txs:///view`
 
-Other LaTeX related templates/utilities
+Other LaTeX related utilities
 
 1. [Dark-TeXstudio theme](https://github.com/hasecilu/Dark-TeXstudio)
 2. [AHP table generator](https://github.com/hasecilu/AHPtableGenerator)
