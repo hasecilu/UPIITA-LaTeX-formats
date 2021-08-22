@@ -1,6 +1,7 @@
 \input{SlideStyle}
 
 \usepackage{siunitx}
+\usepackage{lipsum}
 \addbibresource{References.bib}
 
 %----------------------------------------------------------------------------------------
@@ -85,13 +86,14 @@
 	\begin{frame}
 		\section{Mucho texto}
 		\frametitle{Mucho texto}
-		En tiempos más recientes se a dado a la alza la creación de espacios ``maker'', cuando se está diseñando algún sistema embebido en el que se requiera de probar un prototipo con una tarjeta de circuito impreso personalizada y la fabricación de la misma por un tercero no es viable ya sea por costo o tiempo se recurre a fabricar por uno mismo la tarjeta, realizar esta tarea de forma manual es tedioso, lento y podría llegar a haber errores a causa de que estos componentes suelen tener dimensiones muy pequeñas (llegando a componentes de $ 1[mm]\times2[mm] $).
+		\framesubtitle{Ejemplicación de una lámina con mucho texto}
+		\lipsum[1]
 	\end{frame}
 	%------------------------------------------------
 	\begin{frame}
 		\section{Poco texto + imagen}
-		\frametitle{Poco texto + imagen}
-		Para agilizar el tiempo de fabricación se automatiza el proceso empleando máquinas denominadas \textit{Pick and Place}, este sistema pretende colocar de formar automática diferentes componentes de montaje superficial en placas de circuito impreso.
+		\frametitle{Párrafo pequeño más una imagen}
+		\lipsum[2][1-5]
 		
 		\begin{center}
 			\includegraphics[height=50mm]{images/logo_upiita_oro}
@@ -99,118 +101,156 @@
 	\end{frame}
 	%------------------------------------------------
 	\begin{frame}
+		%\section{Poco texto + imagen}
+		\frametitle{Párrafo pequeño más una imagen lado a lado}
+		
+		\begin{minipage}{\textwidth}
+			\begin{minipage}{0.60\textwidth}
+				\lipsum[5][1-8]
+			\end{minipage}
+			\hfill
+			\begin{minipage}{0.35\textwidth}
+				\includegraphics[height=40mm]{images/logo_upiita_oro}
+			\end{minipage}
+		\end{minipage}
+	\end{frame}
+	%------------------------------------------------
+	\begin{frame}
 		\section{Lista}
 		\frametitle{Lista}
-		A partir de la problemática definida, los principales retos de ingeniería a resolver son:
-		\begin{itemize}
-			\item Diseñar e implementar un sistema de posicionamiento de componentes de montaje superficial manteniendo un error menor de $ \pm 1 [\si {\milli \meter}] $
-			\item Buscar que el mantenimiento del sistema no sea costoso
-			\item A medida de lo posible disminuir la cantidad de energía necesaria para el funcionamiento
-		\end{itemize}
-	
-	\end{frame}
-	%------------------------------------------------
-	\begin{frame}
-		\section{Objetivo general}
-		\frametitle{Objetivo general}
-		\begin{center}
-			\textit{Diseñar un sistema que alimente componentes de montaje superficial a una máquina Pick \& Place consiguiendo un error máximo de $ \pm 1 [\si {\milli \meter}] $.} 
-		\end{center}
-	
-		\begin{center}
-			\includegraphics[height=50mm]{images/PP}
-		\end{center}
-	\end{frame}
-	%------------------------------------------------
-	\begin{frame}
-		\section{Objetivos particulares}
-		\frametitle{Objetivos particulares}
-		%5 − 7 objetivos
-		\begin{itemize}
-			\item Diseñar un sistema de colocación de componentes de montaje superficial en configuración PP que proporcione un error de posición máximo de $ \pm 1 [\si {\milli \meter}] $
-			\item Diseñar los mecanismos que generan el movimiento
-			\item Diseñar estructura del sistema
-			\item Manufacturar la estructura del sistema.
-			\item Manufacturar e integrar los mecanismos
-			\item Manufacturar y validar la electrónica
-			\item Integrar físicamente el sistema y verificar que el error de posición.
-		\end{itemize}
-	\end{frame}
-	%------------------------------------------------
-	\begin{frame}
-		\section{Justificación}
-		\frametitle{Justificación}
-		El sistema propuesto, debido a las condiciones descritas en la sección anterior, está pensado como una alternativa a los sistemas comerciales de alto costo. Este proyecto se plantea como estudio del uso de un robot de dos grados de libertad en configuración PP como sistema de colocación de componentes de montaje superficial.
+		\frametitle{Párrafo pequeño más una lista}
+		\lipsum[3][1-5]
 		
-		Este trabajo se fundamenta en que una de las formas de solventar la disminuyendo simplificando la cantidad de funciones que realize el sistema conllevando así una menor cantidad de componentes que logren disminuir los costos del producto.
+		\SetLipsumSentenceListSurrounders{\begin{itemize}}{\end{itemize}}
+		\SetLipsumSentenceListItemStart{\item}
+		\lipsum[3][6-9]
+%		\begin{itemize}
+%			\item xzczc
+%			\item hk
+%			\item sadasd
+%		\end{itemize}
 	\end{frame}
 	%------------------------------------------------
 	\begin{frame}
-		\section{Antecedentes}
-		\frametitle{Antecedentes}
-			VP-2500DP Precision Belt PNP machine de SMALL SMT \\
-			Funci\'on principal: ensamble de prototipado.\\
-			Especificaciones: \'area de trabajo de 435x465mm, 2000 a 4500 componentes por hora.\\
-			Aplicaci\'on de la tecnolog\'ia: centrado de \'area basado en un modelo de visi\'on, gu\'ias lineales en todos los  ejes.\\
-			\begin{center}
-				\includegraphics[height=30mm]{images/r1}
-			\end{center}
-	\end{frame}
-	%--------------------------------------
-	\begin{frame}
-		\frametitle{Antecedentes}
-		Mini-X2 de Madell Technology Corporation\\
-		Funci\'on principal: ensamble de prototipado.\\
-		Especificaciones: \'area de trabajo de 300x420mm, 2000 componentes por hora aproximadamente.\\
-		Aplicaci\'on de la tecnolog\'ia: centrado autom\'atico para circuitos integrados (IC's) con diferentes empaquetados por visi\'on, gu\'ias lineales en todos los  ejes.\\
-		\begin{center}
-			\includegraphics[height=30mm]{images/r2}
-		\end{center}
-	\end{frame}
-	%--------------------------------------
-	\begin{frame}
-		\frametitle{Antecedentes}
-		TVM802B de Wenzhou Yingxing Technology\\
-		Funci\'on principal: ensamble de prototipado.\\
-		Especificaciones: \'area de trabajo de 395x445mm, 5000 componentes por hora aproximadamente, resoluci\'on de  0.025mm .\\
-		\begin{center}
-			\includegraphics[height=30mm]{images/r3}
-		\end{center}
-	\end{frame}
-	%------------------------------------------------
-	\begin{frame}
-		\section{Imagen al lado de una tabla}
-		\frametitle{Imagen al lado de una tabla}
+		\section{Imagen y una tabla}
+		\frametitle{Imagen y una tabla}
+		\framesubtitle{Imagen al lado de una tabla}
+		
+		% Jugar con los valores de los 2 minipage, el tamaño de la imagen, el espacio horizontal entre los minipage y ancho de las columnas.
 		\begin{minipage}{\textwidth}
 			\begin{minipage}{0.39\textwidth}
 				\centering
-				\includegraphics[height=60mm]{images/Arq Fisica}
-%				\caption{Arquitectura física del sistema propuesto}
+				\includegraphics[height=60mm]{images/logo_upiita_oro}
+%				\caption{Algo acerca de la imagen}
 			\end{minipage}
-			\qquad
+			\hspace{15mm}%\quad%\qquad%\hfill
 			\begin{minipage}{0.45\textwidth}
-				{\tiny \begin{tabular}{c p{50mm}}
-						S\textsubscript{1} & \textit{Sistema estructural}: Se encarga de \underline{integrar} a todos los componentes que conforman el sistema así como también de protegerlos de elementos externos y de si mismo.\\
-						M\textsubscript{1} & \textit{Módulo energético}: Se encarga de transformar y distribuir la energía eléctrica a todos los componentes del sistema que lo requieren. \\
-						M\textsubscript{2} & \textit{Módulo de medición de parámetros}: Se encarga de medir todas aquellas variables significativas para el sistema.\\
-						M\textsubscript{3} & \textit{Módulo de movimiento }: Se encarga de trasladar los componentes desde el alimentador de componentes hasta su respectiva posición en la PCB.\\
-						M\textsubscript{4} & \textit{Módulo de agarre}: Se encarga de agarrar al componente de su posición original, sostener durante el trayecto y soltar en el lugar adecuado a los componentes. \\
-						M\textsubscript{5} & \textit{Módulo de procesamiento de información}: Se encarga de realizar todos los cálculos necesarios para el control, así como de procesar datos de entrada. \\
-						M\textsubscript{6} & \textit{Módulo alimentador de componentes}: Se encarga de colocar a los componentes en cierta posición de la cual serán tomados por el módulo de agarre. \\
-						M\textsubscript{7} & \textit{Interfaz humano-máquina}: Se encarga de enviar información del sistema al operario  y viceversa, tiene una gran importancia porque a travéz de este módulo funciona el modo de operación semiautomático. \\
-						S\textsubscript{2} & \textit{Sistema de procesamiento central}: Es la unión de M2 y M5. \\
-						S\textsubscript{3} & \textit{Sistema de manipulación}: Es la unión de M3 y M4.
+				{\tiny \begin{tabular}{c p{40mm}}
+						S\textsubscript{ex} & \lipsum[4][1-5]\\
+						M\textsubscript{1} & \lipsum[4][6-10] \\
+						M\textsubscript{2} & \lipsum[4][11-15] \\
 				\end{tabular}}
 			\end{minipage}
 		\end{minipage}
 	\end{frame}
 	%------------------------------------------------
 	\begin{frame}
-		\section{Conclusión}
-		\frametitle{Conclusión}
-		\begin{itemize}
-			\item Sin duda tener herramientas y máquinas que nos ayuden a agilizar los procesos productivos nos da una ventaja competitiva por lo que explorar la alternativa de diseñar y construir una Máquina Pick \& Place para componentes de montaje superficial me resulta intrigante desde el punto de vista de ingeniería. ¿Hasta que punto se pueden abaratar costos sin perder prestaciones en cuanto a la función principal en un sistema mecatrónico?
-		\end{itemize}
+		\section{Tabla grande}
+		\frametitle{Tabla grande}
+		\framesubtitle{Proceso Analítico Jerárquico}
+		
+		\begin{table}[!ht]
+			\caption{Matriz de criterios normalizada}
+			\resizebox{\textwidth}{!}{%
+				\begin{tabular}{cccccccccc}
+					\toprule
+					Criterios &  Cr1   &  Cr2   &  Cr3   &  Cr4   &  Cr5   & Cr6  &  Cr7   &   TF   &      VP      \\ \midrule
+					Cr1    & 0.1053 & 0.1875 & 0.1875 & 0.1429 & 0.1667 & 0.04 & 0.0588 & 0.8887 & {[}0.127{]}  \\ %
+					Cr2    & 0.1053 & 0.1875 & 0.1875 & 0.1429 &  0.25  & 0.24 & 0.2353 & 1.3485 & {[}0.1926{]} \\ %
+					Cr3    & 0.1053 & 0.1875 & 0.1875 & 0.1429 &  0.25  & 0.24 & 0.2353 & 1.3485 & {[}0.1926{]} \\ %
+					Cr4    & 0.1053 & 0.1875 & 0.1875 & 0.1429 & 0.0833 & 0.12 & 0.1176 & 0.9441 & {[}0.1349{]} \\ %
+					Cr5    & 0.0526 & 0.0625 & 0.0625 & 0.1429 & 0.0833 & 0.12 & 0.1176 & 0.6414 & {[}0.0916{]} \\ %
+					Cr6    & 0.3158 & 0.0938 & 0.0938 & 0.1429 & 0.0833 & 0.12 & 0.1176 & 0.9672 & {[}0.1382{]} \\ %
+					Cr7    & 0.2105 & 0.0938 & 0.0938 & 0.1429 & 0.0833 & 0.12 & 0.1176 & 0.8619 & {[}0.1231{]} \\ \midrule
+					Suma    & 1.0001 & 1.0001 & 1.0001 & 1.0003 & 0.9999 & 1.0  & 0.9998 & 7.0003 &   {[}1.{]}   \\ \bottomrule
+				\end{tabular}
+			}
+		\end{table}	
+	\end{frame}
+
+	% ¿Como crear esta tabla de forma automática?
+	% https://github.com/hasecilu/AHPtableGenerator
+
+	%------------------------------------------------
+	\begin{frame}
+		\section{Hipervínculos}
+		\frametitle{Hipervínculos}
+		\framesubtitle{De forma escondida en texto y mostrando la url}
+		
+		Puedes dar clic en el \href{https://bit.ly/3mhwQhI}{``clickbait''}.
+		\vspace{25mm}
+		
+		O puedes mostrar la url: \url{https://bit.ly/3mhwQhI}
+		
+	\end{frame}
+	%------------------------------------------------
+	\begin{frame}
+		\section{Robot antropomórfico}
+		\frametitle{Robot antropomórfico}
+		\begin{minipage}{\textwidth}
+			\begin{minipage}{0.5\textwidth}
+				%				\centering
+				\begin{figure}[!ht]
+					\centering
+					%					\includegraphics[height=65mm]{images/antro2}
+					\includegraphics[width=55mm]{images/antro2}
+					\caption{Diagrama cinemático del robot antropomórfico}
+				\end{figure}
+			\end{minipage}
+			%\hspace{15mm}%\quad%\qquad%\hfill
+			\quad
+			\begin{minipage}{0.45\textwidth}
+				Esta imagen se creó usando el el paquete sketch-lib de Alex Dumitrache (\url{https://alexdu.github.io/sketch-lib/}), este programa se usa en consola compilando un archivo .sk y genera un código de \LaTeX usando Tikz que al compilarse se genera el robot, se puede cambiar el color en el archivo .tex generado. Se puede insertar el pdf generado o convetir a imagen para quitar el fondo blanco.
+			\end{minipage}
+		\end{minipage}
+	\end{frame}
+	%------------------------------------------------
+	\begin{frame}   
+		\section{Ecuación grande}
+		\frametitle{Ecuación grande}
+		\framesubtitle{Sin cambiar el tamaño y cambiándolo (comparación)}
+		
+		\begin{equation} 
+			R_6^3 =
+			\begin{vmatrix}
+				C(q_4)C(q_6)C(q_5)-C(q_4)C(q_6) & -C(q_4)S(q_6)S(q_5)-S(q_4)C(q_6) & -C(q_4)C(q_5) \\
+				S(q_4)C(q_6)S(q_5)+C(q_4)S(q_6) & -S(q_4)S(q_6)S(q_5)+C(q_4)C(q_6) & -S(q_4)C(q_5) \\
+				C(q_5)C(q_6)                    & -C(q_5)S(q_6)                    & S(q_5)
+			\end{vmatrix}
+		\end{equation}
+	
+		% Usar el asterisco * (sin albur) hace que desaparezca la enumeración de la ecuación
+		\begin{equation*} 
+			\resizebox{\textwidth}{!}{
+				$	% Habilitamos el modo matemático porque \resizebox está en modo texto
+				R_6^3 =
+				\begin{bmatrix}
+					C(q_4)C(q_6)C(q_5)-C(q_4)C(q_6) & -C(q_4)S(q_6)S(q_5)-S(q_4)C(q_6) & -C(q_4)C(q_5) \\
+					S(q_4)C(q_6)S(q_5)+C(q_4)S(q_6) & -S(q_4)S(q_6)S(q_5)+C(q_4)C(q_6) & -S(q_4)C(q_5) \\
+					C(q_5)C(q_6)                    & -C(q_5)S(q_6)                    & S(q_5)
+				\end{bmatrix}
+			$
+			}
+		\end{equation*}
+
+	\end{frame}
+	%------------------------------------------------
+	\begin{frame}[t,allowframebreaks]
+		\section{Elementos muy grandes}
+		\frametitle{Elementos muy grandes}
+		\framesubtitle{Ocupan varias páginas pero no es necesario crear diferentes frames}
+		% Mucho texto en láminas no está chido =(
+		\lipsum[6-9]
 	\end{frame}
 	%------------------------------------------------
 %	\begin{frame}[t,allowframebreaks]
@@ -219,4 +259,6 @@
 %		\printbibliography
 %	\end{frame}
 
-\end{document} 
+% https://www.youtube.com/watch?v=GAVXVkcpbG0
+
+\end{document}
