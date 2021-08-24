@@ -16,3 +16,13 @@ Other of my LaTeX related utilities
 1. [Dark-TeXstudio theme](https://github.com/hasecilu/Dark-TeXstudio) :sunglasses:
 2. [AHP table generator](https://github.com/hasecilu/AHPtableGenerator) :ok_hand:
 3. [PIC assembler syntax and style](https://github.com/hasecilu/PICcode2LaTeX)
+
+<!--
+<details>
+<summary></summary>
+
+Find the gags across the source documents
+
+</details>
+
+-->
