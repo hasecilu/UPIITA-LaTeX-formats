@@ -5,7 +5,7 @@ Recommended software: [TeXstudio](https://www.texstudio.org/) + [Dark-TeXstudio 
 
 Build and view command: `txs:///xelatex | txs:///biber | txs:///xelatex | txs:///view`
 
-Other UPIITA-LaTeX templates from the community
+Other UPIITA-LaTeX templates from the community :+1:
 
 1. [Thesis from CuetoA](https://github.com/CuetoA/Plantilla-Tesis)
 2. [Protocol from CuetoA](https://github.com/CuetoA/Plantilla-Protocolo-de-investigacion)
