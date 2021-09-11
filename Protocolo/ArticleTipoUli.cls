@@ -37,14 +37,14 @@
 \spanishdecimal{.}
 
 
-% If you are interested on writing Chinese/Japanese/Korean text you need this package and need to install the HanaMinA and HanaMinB fonts
-% https://www.ctan.org/pkg/xecjk
-\RequirePackage{xeCJK}
-%% enable fallback font feature
-\xeCJKsetup{AutoFallBack}
-\setCJKmainfont{HanaMinA}
-% set fallback fonts to `HanaMinA'
-\setCJKmainfont[FallBack]{HanaMinB}
+%% If you are interested on writing Chinese/Japanese/Korean text you need this package and need to install the HanaMinA and HanaMinB fonts
+%% https://www.ctan.org/pkg/xecjk
+%\RequirePackage{xeCJK}
+%%% enable fallback font feature
+%\xeCJKsetup{AutoFallBack}
+%\setCJKmainfont{HanaMinA}
+%% set fallback fonts to `HanaMinA'
+%\setCJKmainfont[FallBack]{HanaMinB}
 
 
 % Important packages related to maths and important elements.
