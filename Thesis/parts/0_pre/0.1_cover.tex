@@ -1,0 +1,19 @@
+% 0.1 Cover
+
+% This command removes the number page, headers and footers from the page
+\thispagestyle{empty}	% Hide headers and footers
+
+% Insert the pdf which is your front cover
+
+\includepdf[pages=1, pagecommand={}, fitpaper=true]{parts/0_pre/drawing.pdf}
+
+% If you use " \thispagestyle{plain} " includepdf package will add the page number, not recommended for the cover
+% \includepdf[pages=1, pagecommand={\thispagestyle{plain}}, fitpaper=true]{parts/0_pre/drawing.pdf}
+
+% In summary:
+% - Add pdf
+% - Remove number, headers and footers (from compiler)
+% - Remove number (from includepdf package)
+
+% Or write LaTeX code to create a cover =/
+% PRO LEVEL

@@ -1,0 +1,260 @@
+% Just "portada" and "acta" commands 
+
+%ORIGINAL FROM
+
+	%tesisupiita )Tesis: UPIITA-IPN
+	%Copyright (C) 2008 Juan Carlos Guzmán Salgado
+
+\typeout{NOTICE:  This macro file is NOT proprietary and may be
+	freely copied and distributed.}
+%
+\NeedsTeXFormat{LaTeX2e}[2021/09/12]
+\ProvidesPackage{parts/0_pre/0.2.2_portada_upiita}[2021/09/12 v0.1 LaTeX package]
+
+
+\usepackage{titling}
+
+
+\def\IPN{INSTITUTO POLIT\'ECNICO NACIONAL}
+\def\Ipn{Instituto Polit\'ecnico Nacional}
+\def\upiita{Unidad Profesional Interdisciplinaria en Ingenier\'ia y Tecnolog\'ias Avanzadas}
+\def\Upiita{UNIDAD PROFESIONAL INTERDISCIPLINARIA EN INGENIER\'IA Y TECNOLOG\'IAS AVANZADAS}
+%%%%%%%%%%\setlength{\droptitle}{0pt}
+\def\unidad#1{\gdef\@unidad{#1}}
+\def\academia#1{\gdef\@academia{#1}}
+\def\nasesores#1{\gdef\@nasesores{#1}}
+\def\nalumnos#1{\gdef\@nalumnos{#1}}
+%\def\Presidentegrado#1{\gdef\@Presidentegrado{#1}}
+%\def\titulargrado#1{\gdef\@titulargrado{#1}}
+\def\asesora#1{\gdef\@asesora{#1}}
+\def\asesorb#1{\gdef\@asesorb{#1}}
+\def\asesorc#1{\gdef\@asesorc{#1}}
+\def\alumnoa#1{\gdef\@alumnoa{#1}}
+\def\alumnob#1{\gdef\@alumnob{#1}}
+\def\alumnoc#1{\gdef\@alumnoc{#1}}
+\def\alumnod#1{\gdef\@alumnod{#1}}
+\def\Titular#1{\gdef\@Titular{#1}}
+\def\Presidente#1{\gdef\@Presidente{#1}}
+\def\grado#1{\setbox0\hbox{#1}  \gdef\@grado{#1}}
+\def\mes#1{\gdef\@mes{#1}}
+\def\anio#1{\gdef\@anio{#1}} %%Sólo mes y año
+\def\thesisdate#1{\gdef\@thesisdate{#1}}
+\def\materia#1{\gdef\@materia{#1}}
+%%\def\asesores#1#2#3{\gdef\@asesora{#1}\par \gdef\@asesorb{#2}\par \gdef\@asesorb{#3}}
+
+%% Creación de la logos y lineas
+
+\newcommand\Vlines{%
+	\def\VL{\rule[0pt]{0.3515 mm}{500pt}\hspace{1mm}\relax}
+	\VL\VL\VL\VL\VL}
+
+\newcommand\LogosVL{%%\fbox{	
+	\parbox{2.5cm}{
+		\begin{center}
+			\includegraphics[scale=.125]{images/LOGO POLI PANTONE 222 C.png}
+		\end{center}
+		\begin{center}
+			\Vlines
+		\end{center}
+		\begin{center}
+			\includegraphics[scale=.3]{images/logo_upiita_oro.png}
+\end{center}}}%}
+
+\def\portada{
+	\begin{titlingpage}	
+		\parindent=0 mm \pagestyle{empty} \parindent=0 mm
+		\rule[0 mm]{0 mm}{600 mm}\hspace{1mm}\relax
+	\end{titlingpage}
+	\begin{titlingpage}
+		\parindent=0 mm \pagestyle{empty}\parindent=0 mm
+		\LogosVL \hspace*{.5cm}
+		\parbox{13cm}{	
+			\centering {\par \Large \bf\IPN\par} \vskip 3.5em \textsc{\@unidad}
+			\vskip 3.5em %
+			\large{\def\baselinestretch{1.2}\Large\bf\it \@materia \par}
+			\vskip 2.0em%
+			\large{\def\baselinestretch{1.2}\Large\bf ``\@title''\par}%
+			\vskip 4em%
+			{\it Que para obtener el t\'itulo de\par}
+			%\vskip 1em%
+			{\Large \emph{\bf ``\@grado''}}
+			\vskip 2em%
+			\ifnum \@nalumnos = 4 Presentan:\par%
+			{\Large \bf \@alumnoa\par\@alumnob\par\@alumnoc\par\@alumnod\par}%
+			\else \ifnum \@nalumnos =3 Presentan:\par  %
+			{\Large \bf \@alumnoa\par\@alumnob\par\@alumnoc\par\vskip 2em}%
+			\else \ifnum \@nalumnos = 2 Presentan:\par%
+			{\Large \bf \@alumnoa\par\@alumnob\par\vskip 3em}%
+			\else Presenta:\par {\Large \bf \@alumnoa \par\vskip 4em}%
+			\fi \fi \fi%
+			\vskip 2em %
+			Asesores:%
+			\ifnum \@nasesores = 1 \par {\Large \@asesora\par} \vskip 4em%
+			\else \ifnum \@nasesores = 2\par  {\Large\@asesora\par\@asesorb\par\vskip 3em}%
+			\else \ifnum \@nasesores = 3 \par  {\Large \@asesora\par\@asesorb\par\@asesorc\par\vskip 2em}%
+			\fi \fi \fi
+			\par  \@mes\ \@anio}%
+	\end{titlingpage}\cleardoublepage}%
+
+% Construcción de acta de firmas
+\def\acta{\begin{titlingpage}
+		\parindent=0 mm \pagestyle{empty} \parindent=0 mm
+		\parbox{2.5cm}{
+			\begin{center}
+				\includegraphics[scale=.125]{images/LOGO POLI PANTONE 222 C.png}
+			\end{center}
+			\begin{center}
+				\Vlines
+			\end{center}
+			\begin{center}
+				\includegraphics[scale=.3]{images/logo_upiita_oro.png}
+			\end{center}
+		} \hspace*{0.5cm}
+		\parbox{13cm}
+		{\centering {\par \Large \bf\IPN\par}
+			\vskip 1.5em \textsc{\@unidad} \vskip 2em
+			\large{\def\baselinestretch{1.2}\Large\bf\it \@materia \par} \vskip 1em
+			\large{\def\baselinestretch{1.2}\Large\bf ``\@title''\par} \vskip 3em {\it Que
+				para obtener el t\'itulo de\par} \vskip 0.5em {\Large \emph{\bf ``\@grado''}}
+			\vskip2em \vfill
+			\ifnum \@nalumnos = 4
+			{\large Presentan:}
+			\par \vskip 1cm
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@alumnoa}
+				\parbox{2cm}{\centering\makebox[2cm]{} }
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@alumnob}
+				\par\vskip 1cm
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@alumnoc}
+				\parbox{2cm}{\centering\makebox[2cm]{} }
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@alumnod}
+			\end{center}
+			\ifnum \@nasesores = 1 {  \vskip 1.5em\large Asesor:} \vskip 1.5em
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}\vskip 1.5em
+			\end{center}  \vskip 3em
+			\else \ifnum \@nasesores = 2 { \vskip 1.5em\large Asesores:} \vskip 1.5em
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}
+				\parbox{2cm}{\makebox[2cm]{} }
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorb}
+			\end{center} \vskip 3em
+			\else \ifnum \@nasesores = 3 {\large Asesores:} \vskip 1.5em
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}
+				\parbox{2cm}{\makebox[2cm]{} }
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorb}
+				\par\vskip 1cm
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorc}
+			\end{center} \vskip1 em \fi \fi \fi
+			\else \ifnum \@nalumnos =3
+			{\large Presenta:}
+			\par \vskip 1cm
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@alumnoa}
+				\parbox{2cm}{\centering\makebox[2cm]{} }
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@alumnob}
+				\par\vskip 1cm
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@alumnoc}
+			\end{center}
+			\ifnum \@nasesores = 1 {  \vskip 1.5em\large Asesor:} \vskip 1.5em
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}\vskip 1.5em
+			\end{center}  \vskip 3em
+			\else \ifnum \@nasesores = 2 { \vskip 1.5em\large Asesores:} \vskip 1.5em
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}
+				\parbox{2cm}{\makebox[2cm]{} }
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorb}
+			\end{center} \vskip 3em
+			\else \ifnum \@nasesores = 3 {\large Asesores:} \vskip 1.5em
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}
+				\parbox{2cm}{\makebox[2cm]{} }
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorb}
+				\par\vskip 1cm
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorc}
+			\end{center} \vskip1 em \fi \fi \fi
+			\else \ifnum \@nalumnos = 2
+			{\vskip 2em\large Presenta:}
+			\par \vskip 1.5cm
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@alumnoa}
+				\parbox{2cm}{\centering\makebox[2cm]{} }
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@alumnob}
+			\end{center}\vskip 2em
+			\ifnum \@nasesores = 1 {  \vskip 1.5em\large Asesor:} \vskip 1.5em
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}\vskip 1.5em
+			\end{center}  \vskip 3em
+			\else \ifnum \@nasesores = 2 { \vskip 1.5em\large Asesores:} \vskip 1.5em
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}
+				\parbox{2cm}{\makebox[2cm]{} }
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorb}
+			\end{center} \vskip 3em
+			\else \ifnum \@nasesores = 3 {\large Asesores:} \vskip 1.5em
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}
+				\parbox{2cm}{\makebox[2cm]{} }
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorb}
+				\par\vskip 1cm
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorc}
+			\end{center} \vskip1 em \fi \fi \fi
+			\else { \vskip 1cm \large Presenta:}
+			\par \vskip 1cm
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@alumnoa}
+			\end{center}
+			\vskip 1.5em
+			\ifnum \@nasesores = 1 {  \vskip 1.5em\large Asesor:} \vskip 1.5em
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}\vskip 1.5em
+			\end{center}  \vskip 3.5em
+			\else \ifnum \@nasesores = 2 { \vskip 1.5em\large Asesores:} \vskip 1.5em
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}
+				\parbox{2cm}{\makebox[2cm]{} }
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorb}
+			\end{center} \vskip 3.5em
+			\else \ifnum \@nasesores = 3 {\large Asesores:} \vskip 1.5em
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}
+				\parbox{2cm}{\makebox[2cm]{} }
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorb}
+				\par\vskip 1cm
+				\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorc}
+			\end{center} \vskip 2em\fi \fi \fi
+			\fi \fi \fi
+			%%%
+			%\vskip 1.5em \ifnum \@nasesores = 1 {\large Asesor:} \vskip 1.5em
+			%\begin{center}\normalsize
+				%\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}
+				%\end{center} \else \ifnum \@nasesores = 2 {\large Asesores:} \vskip 1.5em
+			%\begin{center}\normalsize
+				%\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}
+				%\parbox{2cm}{\makebox[2cm]{} }
+				%\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorb}
+				%\end{center}
+			% \else \ifnum \@nasesores = 3 {\large Asesores:} \vskip 1.5em
+			%\begin{center}\normalsize
+				%\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesora}
+				%\parbox{2cm}{\makebox[2cm]{} }
+				%\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorb}
+				%\par\vskip 1cm
+				%\parbox{5cm}{\centering\rule{5cm}{0.3515 mm}\\ \@asesorc}
+				%\end{center}\fi \fi \fi
+			\vskip 1.5em
+			\begin{center}\normalsize
+				\parbox{5cm}{\centering
+					{\bf Presidente del Jurado}\vspace*{.7cm}
+					\rule{5cm}{0.3515 mm}\\ \@Presidente}
+				\parbox{2cm}{\makebox[2cm]{} }
+				\parbox{5cm}{\centering
+					{\bf Profesor titular}\vspace*{.7cm}
+					\rule{5cm}{0.3515 mm}\\ \@Titular}
+			\end{center}
+			\vskip 1em
+	}\end{titlingpage}\cleardoublepage} %
+
+\endinput
