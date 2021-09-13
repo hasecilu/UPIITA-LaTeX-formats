@@ -1,4 +1,5 @@
-<!–– Zankoku na Tenshi no ––> # Thesis
+<!--- Zankoku na Tenshi no -->
+# Thesis
 
 ## Work in progress!
 
