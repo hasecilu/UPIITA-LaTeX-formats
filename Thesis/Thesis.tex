@@ -1,18 +1,34 @@
 \documentclass{TesisTipoUli}
 
-\usepackage{parts/0_pre/0.2.2_portada_upiita}
+% This code change the page color to black-like color and the text to a white-like color
+\pagecolor[HTML]{111111}
+\color[HTML]{EEEEEE}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% XXXXXXX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+
+	\frontmatter
 	
+	% This section don't appear in the table of contents
 	\input{parts/0_pre/0.0_Preliminar}
+			
+	\tableofcontents
 	
+	\newpage
+	
+	% Content in this section uses roman numerals
 	\input{parts/1_ini/1.0_Introduccion}
+	
+	% Content in this section uses arabic numerals
+	\mainmatter
 	
 	\input{parts/2_med/2.0_Media}
 	
 	\input{parts/3_fin/3.0_Final}
+	
+	% Content in this section has no numbering
+	\backmatter
 	
 	\input{parts/4_adi/4.0_Adicional}
 

@@ -11,13 +11,16 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Used for "portada" and "acta"
+\RequirePackage{parts/0_pre/0.2.2_portada_upiita}
+
 % If you need to change the margins and related stuff uncomment this section
 % DO NOT USE anysize PACKAGE, IT GENERATES PROBLEMS WITH GEOMETRY PACKAGE.
 % GEOMETRY > ANYSIZE
 
 %https://en.wikibooks.org/wiki/LaTeX/Page_Layout
 %https://www.overleaf.com/learn/latex/page_size_and_margins
-%https://tex.stackexchange.com/questions/8260/what-are-the-various-units-ex-em-in-pt-bp-dd-pc-expressed-in-mm
+%https://tex.stackexchange.com/questions/8260/what-ar	e-the-various-units-ex-em-in-pt-bp-dd-pc-expressed-in-mm
 \RequirePackage{calc}
 \RequirePackage[includeheadfoot]{geometry}
 
@@ -54,8 +57,7 @@
 
 \RequirePackage{amsmath}  	% Comandos extras para matemáticas
 \RequirePackage{amssymb}  	% Simbolos matematicos (por lo tanto)
-\RequirePackage{commath}  	% Funcionalidades extras para diferenciales, integrales, 
-% etc (\od, \dif, etc)\RequirePackage{graphicx}  % Incluir imágenes en LaTeX
+\RequirePackage{commath}  	% Diferenciales, integrales, % etc (\od, \dif, etc)
 \RequirePackage{mathtools}  % Comandos extras para matemáticas
 \RequirePackage{mathrsfs}  	% Support for using RSFS fonts in maths
 \RequirePackage{cancel}  	% Para cancelar expresiones (\cancelto{0}{x})
@@ -106,7 +108,7 @@
 \definecolor{colorIPN}{RGB}{108 29 69}  % Pantone 222 C
 \definecolor{colorIPNdark}{HTML}{360F22} % Color generated with \usecolortheme[named=colorIPN]{structure} on beamer document
 \definecolor{colorIPNlight}{HTML}{6C1D45} % Color generated with \usecolortheme[named=colorIPN]{structure} on beamer document
-\RequirePackage[colorlinks=true, plainpages=true, citecolor=blue, linkcolor=colorIPNdark]{hyperref}
+\RequirePackage[colorlinks=true, plainpages=true, citecolor=blue, linkcolor=colorIPN]{hyperref}
 
 % Circle for referencing equations alternative, \textcircled is ugly
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
