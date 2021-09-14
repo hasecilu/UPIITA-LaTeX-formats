@@ -1,7 +1,7 @@
 # UPIITA-LaTeX-formats
 This is a compilation of a few LaTeX formats for Report, Slides, Thesis and Protocol for UPIITA. (not official)
 
-Recommended software: [TeXstudio](https://www.texstudio.org/) + [Dark-TeXstudio theme](https://github.com/hasecilu/Dark-TeXstudio)
+Recommended software: [TeXstudio](https://www.texstudio.org/) + [Dark-TeXstudio theme](https://github.com/hasecilu/Dark-TeXstudio) & [Zotero](https://www.zotero.org/) + [Better BibTeX for Zotero](https://github.com/retorquere/zotero-better-bibtex)
 
 Build and view command: `txs:///xelatex | txs:///biber | txs:///xelatex | txs:///view`
 
