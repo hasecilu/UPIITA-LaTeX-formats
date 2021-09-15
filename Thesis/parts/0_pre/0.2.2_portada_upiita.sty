@@ -61,10 +61,12 @@
 \end{center}}}%}
 
 \def\portada{
-	\begin{titlingpage}	
-		\parindent=0 mm \pagestyle{empty} \parindent=0 mm
-		\rule[0 mm]{0 mm}{600 mm}\hspace{1mm}\relax
-	\end{titlingpage}
+% This code creates a blank page, instead you can use \newpage
+%	\begin{titlingpage}	
+%		\parindent=0 mm \pagestyle{empty} \parindent=0 mm
+%		\rule[0 mm]{0 mm}{600 mm}\hspace{1mm}\relax
+%	\end{titlingpage}
+
 	\begin{titlingpage}
 		\parindent=0 mm \pagestyle{empty}\parindent=0 mm
 		\LogosVL \hspace*{.5cm}
@@ -95,6 +97,7 @@
 			\fi \fi \fi
 			\par  \@mes\ \@anio}%
 	\end{titlingpage}\cleardoublepage}%
+%	\end{titlingpage}}%
 
 % Construcción de acta de firmas
 \def\acta{\begin{titlingpage}
