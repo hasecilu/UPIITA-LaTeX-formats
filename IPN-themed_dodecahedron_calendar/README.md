@@ -3,3 +3,5 @@
 Calendario  con forma de tu sólido platónico favorito.
 
 ![Calendar](https://raw.github.com/hasecilu/LaTeXformats/main/IPN-themed_dodecahedron_calendar/Dodeca.jpeg)
+
+Imagen de [IPN Burrificado](https://www.deviantart.com/dilvereye/art/IPN-Burrificado-622448566) por DilverEye
