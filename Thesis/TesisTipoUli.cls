@@ -92,6 +92,8 @@
 
 \RequirePackage{pdfpages}	% Add pdf files to your text
 \RequirePackage{titling}	% To be able to use cover from Professor Juan Carlos Guzmán Salgado
+\RequirePackage[usestackEOL]{stackengine}	% For  left-aligned text in the lower right-hand corner with preset style
+\RequirePackage{fontspec}	% To create text with custom font
 
 %\RequirePackage{chemfig} 	% Draw molecules
 %\RequirePackage{showframe} % Show boxes on document
@@ -122,6 +124,12 @@
 
 % Thick horizontal lines
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%\fontspec[Path=.fonts/cheltenham-normal/]{CHELTEN3.ttf}
+
+\newfontfamily\myfont{Chilanka}	% Create a new font command
+\newfontfamily\myCBfont[Path=.fonts/cheltenham-normal/]{CHELTEN3.ttf}	% Create a new font command
+
 
 % Number equations/figures/tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
 \numberwithin{equation}{section}
