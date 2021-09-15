@@ -18,7 +18,7 @@ First recommendation: RTFM!
 - [LaTeX for Complete Novices](https://www.dickimaw-books.com/latex/novices/) from  Nicola L. C. Talbot
 - [LaTeX in 24 Hours](https://link.springer.com/book/10.1007/978-3-319-47831-9) from Dilip Datta
 - [Writing a Thesis with LaTeX](https://tug.org/pracjourn/2008-1/mori/mori.pdf) from Lapo F. Mori
-- [Using LTEX to Write a PhD Thesis](https://www.dickimaw-books.com/latex/thesis/) from  Nicola L. C. Talbot
+- [Using LaTeX to Write a PhD Thesis](https://www.dickimaw-books.com/latex/thesis/) from  Nicola L. C. Talbot
 
 ### Recommendations from "La gramática del meme"
 [Tips para redactar mejor](https://www.facebook.com/gramaticadelmeme/posts/1224105938001801)
