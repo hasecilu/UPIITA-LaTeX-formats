@@ -26,11 +26,11 @@ Why? I'm using biblatex with biber as backend
 
 Ubuntu, Debian, Linux Mint
 
-`sudo apt-get install texlive-publishers -y`
+    sudo apt-get install texlive-publishers -y
 
 Fedora
 
-`sudo dnf install texlive-biblatex-ieee -y`
+    sudo dnf install texlive-biblatex-ieee -y
 
 <!--
 <details>
