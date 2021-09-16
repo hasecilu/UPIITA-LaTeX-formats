@@ -4,6 +4,8 @@
 \pagecolor[HTML]{111111}
 \color[HTML]{EEEEEE}
 
+\usepackage{minitoc}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% XXXXXXX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -13,7 +15,9 @@
 	% This section don't appear in the table of contents
 	\input{parts/0_pre/0.0_Preliminar}
 	
+	\dominitoc
 	\tableofcontents
+	\adjustmtc
 	
 	\listoffigures
 	
@@ -26,6 +30,25 @@
 	
 	% Content in this section uses arabic numerals
 	\mainmatter
+	
+	% MINITOC IS NOT WORKING =(, probably because of xelatex
+	
+	\chapter{Ejemplo de capítulo}
+	\minitoc
+	
+	\section{Sección A}
+	
+	\subsection{Sección AA}
+	\subsection{Sección AB}
+	\subsection{Sección AC}
+	
+	\section{Sección B}
+	
+	\subsection{Sección BA}
+	\subsection{Sección BB}
+	\subsection{Sección BC}
+	
+	
 		
 	\input{parts/2_med/2.0_Media}
 	

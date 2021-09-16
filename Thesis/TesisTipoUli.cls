@@ -37,20 +37,21 @@
 \setlength{\textheight}{\paperheight-20mm-20mm}
 \setlength{\footskip}{10mm}
 
-\RequirePackage[main=spanish, english, japanese]{babel}  % Indica que escribiermos en es, en, jp
+%\RequirePackage[main=spanish, english, japanese]{babel}  % Indica que escribiermos en es, en, jp
+\RequirePackage[main=spanish, english]{babel}  % Indica que escribiermos en es, en, jp
 %\RequirePackage[utf8]{inputenc}  %Codificación usada: ISO-8859-1(latin1)  o utf8
 %\RequirePackage{fourier}  %logos and ornaments
 \spanishdecimal{.}
 
 
-% If you are interested on writing Chinese/Japanese/Korean text you need this package and need to install the HanaMinA and HanaMinB fonts
-% https://www.ctan.org/pkg/xecjk
-\RequirePackage{xeCJK}
-%% enable fallback font feature
-\xeCJKsetup{AutoFallBack}
-\setCJKmainfont{HanaMinA}
-% set fallback fonts to `HanaMinA'
-\setCJKmainfont[FallBack]{HanaMinB}
+%% If you are interested on writing Chinese/Japanese/Korean text you need this package and need to install the HanaMinA and HanaMinB fonts
+%% https://www.ctan.org/pkg/xecjk
+%\RequirePackage{xeCJK}
+%%% enable fallback font feature
+%\xeCJKsetup{AutoFallBack}
+%\setCJKmainfont{HanaMinA}
+%% set fallback fonts to `HanaMinA'
+%\setCJKmainfont[FallBack]{HanaMinB}
 
 
 % Important packages related to maths and important elements.
@@ -160,11 +161,11 @@
 % WTF COMMANDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % (etiquetas de figuras)
-\providecommand{\norm}[1]{\lVert#1\rVert}
-% Permite usar etiquetas fuera de elementos flotantes
-% (etiquetas de figuras)
-\RequirePackage{caption}
-\providecommand{\norm}[1]{\lVer#1\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+%% Permite usar etiquetas fuera de elementos flotantes
+%% (etiquetas de figuras)
+%\RequirePackage{caption}
+%\providecommand{\norm}[1]{\lVer#1\rVert}
 
 \sidecaptionvpos{figure}{c}  % Para que el texto se alinee al centro vertical
 
